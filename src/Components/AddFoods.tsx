@@ -5,7 +5,6 @@ import {useRoute} from '@react-navigation/native';
 
 const AddFoods = ({navigation}) => {
   const {params} = useRoute();
-  console.log('params', params);
 
   const {isEdit, itemKey} = params;
 

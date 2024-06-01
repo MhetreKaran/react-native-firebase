@@ -14,7 +14,6 @@ const Login = ({navigation}) => {
     await GoogleSignin.hasPlayServices({ showPlayServicesUpdateDialog: true });
     // Get the users ID token
     const { idToken } = await GoogleSignin.signIn();
-    console.log("idToken ",idToken);
     Alert.alert("Success Login")
     
     // Create a Google credential with the token
@@ -39,7 +38,7 @@ const Login = ({navigation}) => {
 
         auth()
         .signInWithEmailAndPassword(email, password)
-        .then(res => {console.log(res)
+        .then(res => {
             Alert.alert("Success Logged In")
             setEmail('');
             setPassword('');

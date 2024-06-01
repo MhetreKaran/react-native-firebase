@@ -46,7 +46,6 @@ const Home = ({navigation}) => {
     // Unsubscribe from events when no longer in use
     return () => subscriber();
   }, []);
-  console.log('foods data', foods);
 
   if (loading) {
     return <ActivityIndicator />;

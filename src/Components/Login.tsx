@@ -65,17 +65,18 @@ const Login = ({navigation}) => {
           placeholder="Username"
         />
         <TextInput
+          secureTextEntry
           value={password}
           onChangeText={e => setPassword(e)}
           placeholder="Password"
         />
         <Button onPress={()=>handleLogin()} title="Login" />
-        <Button onPress={()=>onGoogleButtonPress()} title="Login with google" />
         <Text
           style={{alignSelf: 'flex-end', marginVertical: 8}}
           onPress={() => navigation.navigate('SignUp')}>
           Register User
         </Text>
+        <Button onPress={()=>onGoogleButtonPress()} title="Login with google" />
       </View>
     </View>
   );
